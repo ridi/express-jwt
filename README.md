@@ -1,12 +1,15 @@
 # express-jwt
 
-[![Build](https://travis-ci.org/auth0/express-jwt.png)](http://travis-ci.org/auth0/express-jwt)
-
 Middleware that validates JsonWebTokens and sets `req.user`.
 
 This module lets you authenticate HTTP requests using JWT tokens in your Node.js
 applications.  JWTs are typically used to protect API endpoints, and are
 often issued using OpenID Connect.
+
+## Differences from the original
+
+[RFC 7230](https://tools.ietf.org/html/rfc7230#section-3.2) explicitly states that header field should be treated as case insensitive, but express-jwt is not.
+So fixed it.
 
 ## Install
 
@@ -200,7 +203,7 @@ app.use(jwt({
     $ npm test
 
 ## Contributors
-Check them out [here](https://github.com/auth0/express-jwt/graphs/contributors)
+Check them out [here](https://github.com/ridibooks/express-jwt/graphs/contributors)
 
 ## Issue Reporting
 
@@ -208,7 +211,7 @@ If you have found a bug or if you have a feature request, please report them at 
 
 ## Author
 
-[Auth0](auth0.com)
+Original author : [Auth0](auth0.com)
 
 ## License
 
